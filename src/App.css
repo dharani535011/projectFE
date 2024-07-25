@@ -1,0 +1,1110 @@
+
+
+.slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 98vh;
+  overflow: hidden;
+  margin: auto;
+ 
+}
+#nav{
+  z-index: 9999 !important;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.controls button {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls button.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+#nav{
+  font-weight: bolder;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  background-color: transparent;
+}
+.custom-size {
+  font-size: 50px;
+  color: black;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important; 
+}
+input.custom-search::placeholder{
+  color: white;
+}
+
+.custom-search:focus {
+  border-color: white;
+  outline: none !important; 
+}
+.letter{
+ font-size: 45px;
+  font-weight: bolder;
+  color: white;
+  position: absolute;
+  left: 15%;
+  top: 35%;
+}
+
+.custom-search:focus,.btn:focus {
+  box-shadow: none !important;
+
+}
+#search{
+  color: white;
+}
+.roo{
+  position: relative;
+}
+.btn2{
+ position: absolute;
+ left: 15%;
+ bottom: 23%;
+ background-color: red;
+ color: white;
+ padding: 1%;
+ padding-left: 3%;
+ padding-right: 3%;
+ border: none;
+}
+.navbar-custom {
+  background-color: transparent !important;
+}
+.cus-btn{
+  margin: 10px;
+}
+.cus-btn:hover{
+    width: 80px;
+    /* height: 50px; */
+    border-color: red !important;
+    i{
+      color: red;
+    }
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important; /* Adjust the color to your preference */
+}
+
+.custom-size {
+  font-size: 50px;
+  color: red;
+}
+
+.custom-search::placeholder {
+  color: white; /* Adjust the placeholder color */
+}
+
+.custom-search:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-outline-success {
+  color: white; /* Adjust the button text color */
+  border-color: white; /* Adjust the button border color */
+}
+
+.btn-outline-success:hover {
+  color: black;
+  background-color: white;
+}
+
+.dropdown-submenu {
+  position: relative;
+  
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+.servicesbg img{
+  position: absolute;
+  width: 100vw;
+  height: 55vh;
+  object-fit: cover;
+}
+.servicesbg button{
+  position: absolute;
+  /* top: 40%; */
+  bottom: 18%;
+  right: 12%;
+  z-index: 8;
+  background-color: red;
+ color: white;
+ padding: 1%;
+ padding-left: 3%;
+ padding-right: 3%;
+ border: none;
+
+}
+.servicesbg{
+  position: relative;
+  width: 100vw;
+  height: 55vh;
+}
+.servicesbg h1{
+  position: absolute;
+  color: white;
+  bottom: 30%;
+  left: 20%;
+  font-weight: bolder;
+  background-color: transparent !important;
+}
+.logoimg{
+  width: 80px;
+  color: white;
+}
+.custom-des{
+display: flex;
+padding: 40px;
+margin-top: 20px;
+align-items: center;
+justify-content: center;
+/* flex-wrap: wrap; */
+width: 100vw;
+height: 100%;
+div{
+  padding: 30px;
+}
+h1{
+  color: red;
+  padding: 10px;
+}
+h4{
+  padding: 10px;
+  color: rgb(70, 66, 66);
+}
+button{
+  background-color: red;
+  margin-top: 10px;
+  padding: 10px;
+  border: 0px;
+  color: white;
+}
+img{
+  width: 40vw;
+}
+}
+/* Whyas.css */
+.whyas {
+  padding-bottom: 60px;
+  width: 100vw; 
+  height: 100%;
+  background-image: url('../public/Backgroundimg/benz.jpg'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+.h1{
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+  color: red;
+  font-size: 60px;
+}
+}
+.content{
+  padding: 10px;
+  margin-left: 20%;
+  cursor: pointer;
+  overflow: hidden;
+  h1{
+    color: white;
+  }
+  h5{
+    color: rgb(175, 158, 158);
+  }
+}
+.working{
+  margin-top: 50px;
+  width: 100vw;
+  height: 100%;
+ #h1{
+  text-align: center;
+  color: red;
+ }
+ .work2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+   height: 100%;
+  padding: 60px;
+  cursor: pointer;
+  .topic{
+    /* width: 33.33%; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h5{
+    color: gray;
+    }
+    h1{
+      font-size: 50px;
+      color: red;
+    }
+    .num{
+      color: gray;
+      font-size: 70px;
+      opacity: .2;
+      margin-bottom: -15px;
+    }
+  }
+ }
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  h1{
+    text-align: center;
+    color: red;
+  }
+  img{
+    width: 100vw;
+  }
+}
+.box{
+  width: 100vw;
+  height: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ padding: 10px;
+ justify-content: center;
+ align-items: center;
+ gap: 15px;
+    img{
+      width: 300px;
+      height: 250px;
+    }
+}
+.button{
+  background-color: red;
+  color: white;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border: none;
+  text-align: center;
+  margin: 20px;
+}
+.img1{
+  margin-top: 80px;
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  h1{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+    margin-top: 20px;
+  }
+}
+
+.logo-slider {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.logo-image {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+/* Brands.css */
+.logo-slider .slick-dots li button:before {
+  margin: 20px;
+  /* padding: 10px; */
+  font-size: 12px;
+  color: gray; /* Change this to your desired color */
+}
+
+.logo-slider .slick-dots li.slick-active button:before {
+  color: red; /* Change this to your desired color for active dot */
+}
+.logo-slider{
+  padding: 60px;
+}
+
+.mainbody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+}
+.foot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.head{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 50px;
+  height: 100%;
+}
+.div1{
+  cursor: pointer;
+  p span i{
+    color: red;
+    margin-right: 5px;
+  }
+  h3{
+    color: red;
+  }
+  img{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+  width: 50%;
+ 
+  .i i{
+    padding: 10px;
+    border: 1px solid red;
+    margin: 6px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .i i:hover{
+    border: 3px solid red;
+  }
+}
+.div2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  h3{
+    color: red;
+    margin-left: 18px;
+  }
+ width: 25%;
+ cursor: pointer;
+ ul li{
+  margin: 6px;
+ }
+}
+.div3{
+  h3{
+    color: red;
+    margin-left: 18px;
+  }
+  width: 25%;
+  cursor: pointer;
+  ul li{
+    margin: 6px;
+    color: black;
+   }
+
+ }
+ .link{
+  text-decoration: none;
+  color: black;
+
+ }
+ ul li :hover{
+     color: red;
+ }
+ ul li::marker {
+  color: red; 
+}
+.empty{
+  width: 100vw;
+  height: 90vh;
+}
+.com{
+  display: flex;
+  margin-top: 30px;
+  width: 100vw;
+  height: 100%;
+  padding: 30px;
+  padding-top: 100px;
+  div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+   img{
+    color: red;
+    width: 120px;
+  }
+  img:hover{
+    width: 140px;
+  }
+}
+.com p:hover{
+  color: red;
+}
+.com h3:hover{
+  color: red;
+  font-size: 30px;
+
+}
+/* .twocom{
+  position: relative;
+  background-image: url('../public/Backgroundimg/two2.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 60vh;
+  p,.p{
+    
+    color: white;
+     text-align: center;
+  }
+  .p{
+    padding-top: 40px;
+    color: red;
+    font-weight: bold;
+  }
+  p{
+   
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.twocom2{
+  position: absolute;
+  top: 65%;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  div{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 70%;
+    background-color: black;
+    margin: 15px;
+    padding: 20px;
+    transition-duration: 1s;
+    
+    h1{
+      font-size: 50px;
+    }
+   
+  }
+}
+.twocom2 div:hover{
+  transform: translateY(-20px)
+} */
+.twocom {
+  position: relative;
+  background-image: url('../public/Backgroundimg/two2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto; /* Set height to auto to let content dictate the height */
+  padding: 20px; /* Add padding for some breathing room */
+}
+
+.twocom h1, .twocom p {
+  color: white;
+  text-align: center;
+}
+
+.twocom h1.p {
+  padding-top: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+.twocom p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.twocom2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  margin-top: 20px; /* Add margin to create space between sections */
+}
+
+.twocom2 div {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Set to 100% for mobile, adjusted in media queries */
+  max-width: 200px; /* Ensures the divs don't get too large on wider screens */
+  background-color: black;
+  margin: 15px;
+  padding: 20px;
+  transition: transform .5s;
+}
+
+.twocom2 div h1 {
+  font-size: 50px;
+}
+
+.twocom2 div:hover {
+  transform: translateY(-25px);
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .twocom2 div {
+    width: calc(33.33% - 30px); /* Three columns on tablets and above */
+  }
+}
+
+@media (min-width: 1024px) {
+  .twocom2 div {
+    width: calc(25% - 30px); /* Four columns on larger screens */
+  }
+}
+.threecom{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  .h{
+    margin-bottom: 30px;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+  }
+}
+.three3 img{
+  width: 100px;
+}
+.three3{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    h1{
+      color: red;
+      font-size: 45px;
+      margin: 6px;
+    }
+  }
+}
+/* Nav.css */
+.dropdown-menu {
+  background-color: black !important; 
+  color: #fff; 
+}
+
+.dropdown-menu .dropdown-item {
+  color: #fff; 
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #555; 
+  color: #fff; 
+}
+
+ .custom-search:focus{
+     background-color: black !important;
+     
+ }
+ .nav-link:hover{
+  color: red !important;
+  font-size: 20px;
+
+ }
+
+ .loginbg {
+  background-image: url(../public/Backgroundimg/login.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  filter: contrast(3) brightness(0.9) hue-rotate(-20deg);
+  position: absolute;
+}
+
+.loginback {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginform {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.loginform div {
+  width: 100%;
+}
+
+.loginform input {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: white;
+}
+
+.loginform input::placeholder {
+  color: red;
+  font-size: 100%;
+  font-weight: bolder;
+}
+
+.loginform input:focus {
+  outline: none;
+  background-color: black;
+  border: 1px solid red;
+}
+
+.loginform h3,
+.loginform h6 {
+  cursor: pointer;
+  color: white;
+}
+
+.loginform button {
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+  background-color: red;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.loginform h1 {
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.tab{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100vw;
+  table{
+    
+    width: 80vw;
+    button{
+      background-color: red;
+      color: white;
+      border: 0px;
+      border-radius: 4px;
+    }
+  }
+
+}
+.tab table tbody tr td:nth-child(3){
+            text-align: center;
+}
+.tab table thead tr td:nth-child(3){
+  text-align: center;
+}
+
+/* Vehiclehistory.css */
+.pro h1 {
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.profilemain {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../public/Backgroundimg/speedo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; /* Changed to relative to not cover the whole screen */
+}
+
+.profilemain > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilemain img {
+  width: 80%; /* Use relative width for responsiveness */
+  max-width: 350px; /* Set a max width to prevent it from getting too large */
+  clip-path: circle();
+  margin-bottom: 20px; /* Add margin to separate from text */
+}
+
+.profilemain button {
+  background-color: red;
+  width: 20%; /* Use relative width for responsiveness */
+  max-width: 200px; /* Set a max width to prevent it from getting too large */
+  margin: 30px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.details {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%; /* Use relative width for responsiveness */
+  max-width: 600px; /* Set a max width to prevent it from getting too large */
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Use relative width for responsiveness */
+}
+
+.details input {
+  width: 70%;
+  /* border: 2px solid white; */
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.details input:focus {
+  color: white;
+  background-color: black;
+  outline: none;
+  border: 2px solid red;
+}
+
+.details label {
+  width: 30%;
+  color: red;
+  font-weight: bolder;
+}
+
+.imgh1 {
+  background-color: black !important;
+  text-align: center;
+  color: red;
+  /* margin-bottom: 30px !important; */
+  font-weight: bolder;
+  font-size: 2em; /* Use relative font size for responsiveness */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .profilemain {
+    height: auto;
+    padding: 20px;
+  }
+
+  .details {
+    width: 90%;
+  }
+
+  .profilemain img {
+    width: 60%;
+  }
+
+  .profilemain button {
+    width: 40%;
+  }
+
+  .details div {
+    flex-direction: column;
+  }
+
+  .details label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .details input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgh1 {
+    font-size: 1.5em;
+  }
+
+  .profilemain img {
+    width: 80%;
+  }
+
+  .profilemain button {
+    width: 60%;
+  }
+}
+.about{
+  margin-top: 40px !important;
+  margin: 60px;
+  padding: 40px;
+  img{
+    width: 500px;
+    height: 500px;
+    float: right;
+    margin: 0px;
+  }
+  h1{
+    font-size: 50px;
+  }
+  p{
+    color: gray;
+  }
+}
+.app1 {
+  position: fixed;
+  z-index: 88999999;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff !important;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.popbg {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 999998;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.appform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h1{
+    background-color: white !important;
+  }
+}
+
+.appform div {
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appform label {
+  font-weight: bold;
+}
+
+.appform input,
+.appform select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.appform p {
+  color: red;
+  font-size: 0.875em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.appform button[type="submit"],
+.appform button[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.appform button[type="button"] {
+  background-color: #dc3545;
+}
+
+.appform button:hover {
+  opacity: 0.9;
+}
+.custom-loader{
+  
+  position: absolute;
+  z-index: 999999999;
+  top: 42%;
+  left: 49%;
+
+}
+.popbg1{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999888;
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.sfmain{
+    position: fixed;
+    width: 50vw;
+    height: 80vh;
+    z-index: 999999;
+    background-color: white;
+    top:3%;
+    left: 25%;
+    border-radius: 2px;
+}
+.sf{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  input{
+    width: 70%;
+    border-color: #dc3545;
+    padding: 9px;
+  }
+  button{
+    width: 30%;
+    border: 0px;
+    background-color: red;
+    color: white;
+  }
+  input:focus{
+     outline: none;
+
+  }
+}
+.close{
+  position: absolute;
+  bottom: 5%;
+  right: 35%;
+  height: 35px;
+}
+.search{
+  width: 100%;
+  margin: 23px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  p{
+    width: 80%;
+    cursor: pointer;
+  }
+  
+}
+.sfbg{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  
+}
+.fbox{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 2%;
+  background-color: #555;
+  width: 40%;
+  height: 50vh;
+  padding: 20px;
+  gap: 10px;
+  span{
+    display: flex;
+    gap: 10px;
+    input{
+      cursor: pointer;
+    }
+  }
+}
