@@ -7,6 +7,7 @@ import Threecom from '../Components/Threecom'
 import Brands from '../Components/Brands'
 import Foot from '../Components/Foot'
 import Appointmentpopup1 from '../Components/Appointmentpopup1'
+import Ratings from '../Components/Ratings'
 
 const Home = () => {
   
@@ -18,8 +19,9 @@ const Home = () => {
     <div className='empty'></div>
     <Common/>
     <Twocom/>
-    <Threecom/>
     <Brands/>
+    <Threecom/>
+    <Ratings/>
     <Foot/>
     </div>
   )

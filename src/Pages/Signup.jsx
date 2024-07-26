@@ -102,7 +102,9 @@ const Signup = () => {
           </div>
           <p>{formik.errors.password}</p>
           <button type='submit'>Signup</button>
-          <h3 onClick={()=>navigate("/login")}>Login</h3>
+          <h3 onClick={()=>{navigate("/login")
+            formik.resetForm
+          }}>Login</h3>
         </form></div>
       </>
     )

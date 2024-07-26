@@ -23,7 +23,8 @@ const validate = values => {
 };
 
 const Appointmentpopup1 = () => {
-  const {value}= useContext(OtherContext)
+  const {value,ratingpop}= useContext(OtherContext)
+  const [ratepop,setratepop]=ratingpop
   const [popup,setpop]=value
     const formik = useFormik({
         initialValues: {
@@ -38,6 +39,11 @@ const Appointmentpopup1 = () => {
             console.log(values);
         }
     });
+
+     const handlesubmit=()=>{
+        setratepop(true)
+     }
+
 
     return (
         <div>
@@ -138,7 +144,7 @@ const Appointmentpopup1 = () => {
                             <p>{formik.errors.services}</p>
                         ) : null}
                     </div>
-                    <button type='submit'>BOOK</button>
+                    <button type='submit' onClick={handlesubmit}>BOOK</button>
                     <button type='button' className='btn btn-danger' onClick={()=>{setpop(false)
                        formik.resetForm();
                     }}>cancel</button>

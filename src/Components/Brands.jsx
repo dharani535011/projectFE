@@ -29,7 +29,7 @@ const Brands = () => {
         dots: true,
         infinite: true,
         speed: 700,
-        slidesToShow:width>438? 3:1,
+        slidesToShow:width>600? 3:1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,

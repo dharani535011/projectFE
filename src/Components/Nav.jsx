@@ -7,12 +7,14 @@ import Loader from './Loader';
 import { OtherContext } from '../Contexts/OtherContext';
 import { useContext } from 'react';
 import SF from './SF';
+import Rating from './Rating';
 const Nav = () => {
   const navigate=useNavigate()
-  const {loaders,authentication,searchpop}=useContext(OtherContext)
+  const {loaders,authentication,searchpop,users}=useContext(OtherContext)
     const [loader,setloader]=loaders
     const [authen,setauthen]=authentication
     const [searc,setsearc]=searchpop
+    const [user,setuser]=users
  const { width, height }= Windowsize()
   const handleSubmenuClick = (e) => {
     e.preventDefault();
@@ -53,10 +55,12 @@ const Nav = () => {
           
        }
  }
+//  console.log(user)
 
   return (
     <>
     <SF/>
+    <Rating/>
     <Loader/>
     <div id='nav'>
       <nav className="navbar navbar-expand-lg navbar-custom">
@@ -163,7 +167,7 @@ const Nav = () => {
             <li><Link className="dropdown-item" to="" onClick={handlelogout}>Logout</Link></li>
           </ul>
         </li>)}
-        {!authen?(null):( <li className="nav-item">
+        {user.role==="user"?(null):( <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/users">Users</Link>
               </li>)}
              

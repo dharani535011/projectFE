@@ -15,6 +15,7 @@ const Servicesbg = ({name}) => {
     }
    }
   return (
+    
     <div className='servicesbg'>
         <img src="../../public/Backgroundimg/servicesbg.jpg" alt="" />
         <h1>{name}</h1>

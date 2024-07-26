@@ -15,8 +15,8 @@ const SF = () => {
     const filteredData = data.filter(val => 
         val.head.toLowerCase().includes(search.toLowerCase())
     );
-    const common=radio>0?radio:10000
-    const Filtervals=common===10000?(filteredData.filter((val)=>val.price<=common)):(filteredData.filter((val)=>val.price<=common && val.price>=common-500))
+    const common=parseInt(radio)>0?parseInt(radio):10000
+    const Filtervals=common===10000?(filteredData.filter((val)=>val.price >= 2500)):(filteredData.filter((val)=>val.price<=common && val.price>=common-500))
    
   return (
     <>
@@ -24,7 +24,7 @@ const SF = () => {
     <div className='sfmain'>
         <div className='sf'>
               <input type="text" placeholder='Search' value={search} onChange={(e)=>setsearch(e.target.value)}/>
-              <button onMouseEnter={()=>setfilter(true)}
+              <button className='d-flex' onMouseEnter={()=>setfilter(true)}
                
                 >Filter</button>
               <button type="button" className="close" onClick={()=>setsearc(false)} >Cancel</button>
