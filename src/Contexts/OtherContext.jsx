@@ -44,12 +44,13 @@ const OtherProvider=({children})=>{
                 // console.log(res.data.user)
                 localStorage.setItem("auth",true)
                 setauthen(true)
+                console.log(authen)
                 navigate("/")
              }else{
                 setauthen(false)
                 // navigate("/login")
              }
-            
+            console.log(authen)
         }
         check()
     },[authen,loader,navigate])
