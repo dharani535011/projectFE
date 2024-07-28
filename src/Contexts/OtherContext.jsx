@@ -50,7 +50,7 @@ const OtherProvider=({children})=>{
                 setauthen(false)
                 // navigate("/login")
              }
-            console.log(authen)
+            // console.log(authen)
         }
         check()
     },[authen,loader,navigate])
