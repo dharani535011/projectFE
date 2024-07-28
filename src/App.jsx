@@ -22,14 +22,14 @@ const App = () => {
       
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/services/:service' element={authen?<Servies/>:<Navigate to="/login"/>}/>
+        <Route path='/services/:service' element={<Servies/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        <Route path='/appointments' element={authen?<Appointment/>:<Navigate to="/login"/>}/>
-        <Route path='/users' element={authen?<Users/>:<Navigate to="/login"/>}/>
-        <Route path='/userhistory' element={authen?<Userhistory/>:<Navigate to="/login"/>}/>
-        <Route path='/vehiclehistory' element={authen?<Vehiclehistory/>:<Navigate to="/login"/>}/>
-        <Route path='/profile' element={authen?<Profile/>:<Navigate to="/login"/>}/>
+        <Route path='/appointments' element={<Appointment/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/userhistory' element={<Userhistory/>}/>
+        <Route path='/vehiclehistory' element={<Vehiclehistory/>}/>
+        <Route path='/profile' element={<Profile/>}/>
         <Route path='/aboutus' element={<Aboutus/>}/>
         <Route path='/resetpassword' element={<Resetpass/>}/>
       </Routes>

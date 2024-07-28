@@ -39,6 +39,7 @@ const Login = () => {
       if(response.data.message==="login successfully"){
           navigate("/")
           setauthen(true)
+          localStorage.setItem("auth",true)
       }
       alert(response.data.message)
      } catch (error) {
