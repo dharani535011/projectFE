@@ -39,7 +39,7 @@ const OtherProvider=({children})=>{
                 withCredentials:true
              })
             
-             if(res.data.message==="valid"){
+             if(res.data.user){
                 setuser(res.data.user)
                 // console.log(res.data.user)
                 setauthen(true)
