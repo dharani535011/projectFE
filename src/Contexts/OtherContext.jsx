@@ -59,6 +59,7 @@ const OtherProvider=({children})=>{
         const val = localStorage.getItem("auth");
         if (val) {
             setauthen(true);
+            console.log(authen)
         }
     }, []);
 // console.log(authen)
