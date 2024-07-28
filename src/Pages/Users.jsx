@@ -8,16 +8,21 @@ import { OtherContext } from '../Contexts/OtherContext'
 
 
 const Users = () => {
-    const [users,setusers]=useState([])
-   const{loaders}=useContext(OtherContext)
+   
+   const{loaders,users,reviews,useres}=useContext(OtherContext)
    const [loader,setloader]=loaders
+   const [user,setuser]=users
+   const [userss,setusers]=useres
+   const [review,setreview]=reviews
     useEffect(()=>{
         const datas=async()=>{
-            const res=  await axios.get("http://localhost:3000/user/allusers")
+            const res=  await axios.post("http://localhost:3000/user/allusers",{},{withCredentials:true})
             setusers(res.data)
+            setreview(res.data)
         }
      datas()
     },[loader])
+    const filters=userss.filter((val)=>val._id!==user._id)
     const handledelete=async(id)=>{
         try {
             setloader(true)
@@ -47,7 +52,7 @@ const Users = () => {
                 <td>No.</td><td>Username</td><td>Delete User</td>
                 </tr></thead>
                 <tbody>{
-                    users.map((val,ind)=>(
+                    filters.map((val,ind)=>(
                         <tr key={ind}>
                     <td>{ind+1}</td><td>{val.name}</td><td><button onClick={()=>handledelete(val._id)}>DELETE</button></td></tr>
                     ))

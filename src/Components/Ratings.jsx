@@ -1,23 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Windowsize from './Windowsize';
-const slides = [
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control."},
-    { name:"dharani",review:"Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control.Set up Node.js and Express.js for creating RESTful APIs to handle requests and responses.Use MongoDB for storing and managing tasks, user data, and authentication details.Implement JWT, and Bcrypt for secure access.Integrate middleware for user permissions and role-based access control."},
-   
-   
-  ]
+import { OtherContext } from '../Contexts/OtherContext';
+
 const Ratings = () => {
+  const {reviews}=useContext(OtherContext)
+  const [review,setreview]=reviews
+ 
  const {width,height}= Windowsize()
     const settings = {
         dots: true,
@@ -28,13 +20,17 @@ const Ratings = () => {
         autoplay: true,
         autoplaySpeed: 3000,
       }
+     
+      // console.log(review)
+
+      const filters=review.filter((val)=>val.review.length>0)
   return (
 
     <div className='img11'><h1>Customer Testimonials</h1>
     <p>What Our Customers Have To Say</p>
    <div className="logo-slider1">
       <Slider {...settings}>
-        {slides.map((logo, index) => (
+        {filters.map((logo, index) => (
           <div className="logo-image" key={index}>
             <p>{logo.review}</p>
             <h4><i className="fa-solid fa-user"></i>{logo.name}</h4>

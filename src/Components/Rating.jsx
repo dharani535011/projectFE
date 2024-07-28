@@ -1,22 +1,38 @@
 import { useContext, useState } from "react"
 import { OtherContext } from "../Contexts/OtherContext"
+import Loader from "./Loader"
+import axios from "axios"
 
 
 const Rating = () => {
 const [text,settext]=useState("")
-const {ratei,ratingpop}=useContext(OtherContext)
+const {ratei,ratingpop,loaders,users}=useContext(OtherContext)
   const [rating,setrating]=ratei
+  const [loader,setloader]=loaders
   const [ratepop,setratepop]=ratingpop
+  const [user,setuser]=users
   const handlecancel=()=>{
           setratepop(false)
           setrating("")
           settext("")
   }     
-  const handlesubmit=()=>{
-    setratepop(false)
+  const handlesubmit=async()=>{
+    setloader(true)
+    try {
+     const res=await axios.post("http://localhost:3000/user/review",{
+      rating,review:text,userid:user._id
+     },{withCredentials:true})
+      alert(res.data.message)
+      setratepop(false)
+    } catch (error) {
+      alert(error.message)
+    }finally{
+      setloader(false)
+    }
 }
   return (
     <>
+    <Loader/>
     <div className='rating1' style={{display:ratepop?"flex":"none"}}>
       <div className='rating2'>
           <div className='ratei'>

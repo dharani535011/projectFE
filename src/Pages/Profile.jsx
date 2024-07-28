@@ -59,7 +59,8 @@ const handlecancel=(e)=>{
   setbut(true)
   setinput(false)
 }
-const image=`http://localhost:3000/${user.image}`|| "../../public/Backgroundimg/profile.webp"
+
+const image=user.image?`http://localhost:3000/${user.image}`: "../../public/Backgroundimg/profile.webp"
   return (
     <div className='pro'>
       <Appointmentpopup1/>

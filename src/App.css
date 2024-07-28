@@ -355,6 +355,7 @@ img{
   width: 100px;
   height: auto;
   margin: 0 auto;
+  cursor: grab;
 }
 /* Brands.css */
 .logo-slider .slick-dots li button:before {
@@ -1030,7 +1031,7 @@ img{
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 99999888;
+  z-index: 99999999999999999;
   background-color: rgba(0, 0, 0, 0.5);
  
 }

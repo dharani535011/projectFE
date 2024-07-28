@@ -55,7 +55,7 @@ const Nav = () => {
           
        }
  }
-//  console.log(user)
+//  console.log(( (user.role =="admin") && ( authen)  ),authen)
 
   return (
     <>
@@ -167,9 +167,9 @@ const Nav = () => {
             <li><Link className="dropdown-item" to="" onClick={handlelogout}>Logout</Link></li>
           </ul>
         </li>)}
-        {user.role==="user"?(null):( <li className="nav-item">
+        {( (user.role =="admin") && ( authen)  )?(<li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/users">Users</Link>
-              </li>)}
+              </li>):(null )}
              
               {!authen?(null):( <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/appointments">Appointments</Link>

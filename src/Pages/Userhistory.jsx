@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav2 from '../Components/Nav2'
 import Appointmentpopup1 from '../Components/Appointmentpopup1'
+import axios from 'axios'
 const data=[{
    
   vehicleno:"jhbj",
@@ -9,7 +10,21 @@ const data=[{
   appointmentdate:"867687"
 }]
 const Userhistory = () => {
+ const [history,sethistory]=useState([])
+
+ useEffect(()=>{
+  const datas=async()=>{
+      const res=  await axios.post("http://localhost:3000/service/history",{},{withCredentials:true})
+      sethistory(res.data.message)
+     
+  }
+datas()
+},[])
+// console.log(history)
+
+
   return (
+
     <div>
       <Appointmentpopup1/>
       <Nav2/>
@@ -17,12 +32,12 @@ const Userhistory = () => {
         <div className='tab'>
         <table className='table table-striped'>
             <thead><tr>
-                <td>No.</td><td>Username</td><td>VehicleNo.</td><td>Service</td><td>Date</td>
+                <td>No.</td><td>Phone No.</td><td>VehicleNo.</td><td>Service</td><td>Date</td>
                 </tr></thead>
                 <tbody>{
-                    data.map((val,ind)=>(
+                    history.map((val,ind)=>(
                         <tr key={ind}>
-                    <td>{ind+1}</td><td>hgvh</td><td>hgvh</td><td>hgvh</td><td>hgvh</td></tr>
+                    <td>{ind+1}</td><td>{val.phone}</td><td>{val.vehicleno}</td><td>{val.service}</td><td>{val.appointmentdate}</td></tr>
                     ))
                     }
                     </tbody>

@@ -12,8 +12,27 @@ const OtherProvider=({children})=>{
     const [authen,setauthen]=useState(false)
     const [searc,setsearc]=useState(false)
     const [user,setuser]=useState("")
+    const [review,setreview]=useState([])
     const navigate=useNavigate()
-    
+    const [userss,setusers]=useState([])
+    useEffect(()=>{
+        const datas=async()=>{
+            const res=  await axios.post("http://localhost:3000/user/allreview",{},{withCredentials:true})
+            
+            setreview(res.data)
+        }
+     datas()
+    },[loader])
+    useEffect(()=>{
+        const datas=async()=>{
+            const res=  await axios.post("http://localhost:3000/user/allusers",{},{withCredentials:true})
+            setusers(res.data)
+            
+        }
+     datas()
+    },[loader])
+
+
     useEffect(()=>{
         const check=async()=>{
              const res=await axios.post("http://localhost:3000/user/check",{},{
@@ -36,7 +55,8 @@ const OtherProvider=({children})=>{
 
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]
-            ,searchpop:[searc,setsearc],ratingpop:[ratepop,setratepop],ratei:[rating,setrating],users:[user,setuser]
+            ,searchpop:[searc,setsearc],ratingpop:[ratepop,setratepop],ratei:[rating,setrating],users:[user,setuser],
+            reviews:[review,setreview],useres:[userss,setusers]
         }}>
             {
                 children
