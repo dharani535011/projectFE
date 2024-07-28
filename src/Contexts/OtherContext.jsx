@@ -61,7 +61,7 @@ const OtherProvider=({children})=>{
             setauthen(true);
         }
     }, []);
-console.log(authen)
+// console.log(authen)
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]
             ,searchpop:[searc,setsearc],ratingpop:[ratepop,setratepop],ratei:[rating,setrating],users:[user,setuser],
