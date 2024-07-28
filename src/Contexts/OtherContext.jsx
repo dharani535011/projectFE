@@ -40,6 +40,7 @@ const OtherProvider=({children})=>{
              })
             const val=res.data.user?true:false
             setauthen(val)
+            console.log(val)
              if(res.data.user){
                 setuser(res.data.user)
                 // console.log(res.data.user)
