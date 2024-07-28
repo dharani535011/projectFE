@@ -61,7 +61,7 @@ const OtherProvider=({children})=>{
             setauthen(true);
             console.log(authen)
         }
-    }, []);
+    }, [authen]);
 // console.log(authen)
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]
