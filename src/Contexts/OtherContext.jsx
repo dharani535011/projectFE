@@ -38,33 +38,22 @@ const OtherProvider=({children})=>{
              const res=await axios.post("http://localhost:3000/user/check",{},{
                 withCredentials:true
              })
-            const val=res.data.user?true:false
-            setauthen(val)
-            console.log(val)
+            
              if(res.data.user){
                 setuser(res.data.user)
-                // console.log(res.data.user)
-                localStorage.setItem("auth",true)
+              
                 setauthen(true)
-                console.log(authen)
+              
                 navigate("/")
              }else{
                 setauthen(false)
-                // navigate("/login")
+               
              }
-            // console.log(authen)
+         
         }
         check()
-    },[authen,loader,navigate])
+    },[authen,loader])
    
-    useEffect(() => {
-        const val = localStorage.getItem("auth");
-        if (val) {
-            setauthen(true);
-            console.log(authen)
-        }
-    }, [authen]);
-// console.log(authen)
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]
             ,searchpop:[searc,setsearc],ratingpop:[ratepop,setratepop],ratei:[rating,setrating],users:[user,setuser],
