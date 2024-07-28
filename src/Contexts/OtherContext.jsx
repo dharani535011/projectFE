@@ -9,7 +9,7 @@ const OtherProvider=({children})=>{
   const [ratepop,setratepop]=useState(false)
     const [popup,setpop]= useState(false)
     const [loader,setloader]=useState(false)
-    const [authen,setauthen]=useState(false)
+    const [authen,setauthen]=useState(true)
     const [searc,setsearc]=useState(false)
     const [user,setuser]=useState("")
     const [review,setreview]=useState([])
