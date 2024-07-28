@@ -42,6 +42,7 @@ const OtherProvider=({children})=>{
              if(res.data.user){
                 setuser(res.data.user)
                 // console.log(res.data.user)
+                localStorage.setItem("auth",true)
                 setauthen(true)
                 navigate("/")
              }else{
@@ -51,7 +52,14 @@ const OtherProvider=({children})=>{
             
         }
         check()
-    },[authen,loader])
+    },[authen,loader,navigate])
+   
+    useEffect(() => {
+        const val = localStorage.getItem("auth");
+        if (val) {
+            setauthen(true);
+        }
+    }, []);
 console.log(authen)
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]

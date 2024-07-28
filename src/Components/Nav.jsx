@@ -38,6 +38,10 @@ const Nav = () => {
   };
  const handlelogout=async(e)=>{
   e.preventDefault()
+  const val=localStorage.clear()
+  if(!val){
+       setauthen(false)
+  }
        try {
         setloader(true)
         const res=await axios.post("http://localhost:3000/user/logout",{},{
