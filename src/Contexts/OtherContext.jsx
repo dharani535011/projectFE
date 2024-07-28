@@ -38,7 +38,7 @@ const OtherProvider=({children})=>{
              const res=await axios.post("http://localhost:3000/user/check",{},{
                 withCredentials:true
              })
-            
+            console.log(authen)
              if(res.data.user){
                 setuser(res.data.user)
                 // console.log(res.data.user)
