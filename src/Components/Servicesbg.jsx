@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { OtherContext } from '../Contexts/OtherContext'
 import { useNavigate } from 'react-router-dom'
+import img from "../../public/Backgroundimg/bgcar1.jpg"
 const Servicesbg = ({name}) => {
   const navigate=useNavigate()
   const {value,authentication}= useContext(OtherContext)
@@ -16,8 +17,8 @@ const Servicesbg = ({name}) => {
    }
   return (
     
-    <div className='servicesbg'>
-        <img src="../../public/Backgroundimg/bgcar1.jpg" alt="" />
+    <div className='servicesbg' style={{backgroundColor:"black"}}>
+        <img src={img} alt="" />
         <h1>{name}</h1>
         <button onClick={()=>handlefun()}>BOOK AN APPOINTMENT</button>
     </div>
