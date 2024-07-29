@@ -16,7 +16,7 @@ const Users = () => {
    const [review,setreview]=reviews
     useEffect(()=>{
         const datas=async()=>{
-            const res=  await axios.post("http://localhost:3000/user/allusers",{},{withCredentials:true})
+            const res=  await axios.post("https://projectbe-3-udjp.onrender.com/user/allusers",{},{withCredentials:true})
             setusers(res.data)
             setreview(res.data)
         }
@@ -26,7 +26,7 @@ const Users = () => {
     const handledelete=async(id)=>{
         try {
             setloader(true)
-            const res=  await axios.post("http://localhost:3000/user/delete",{id},{
+            const res=  await axios.post("https://projectbe-3-udjp.onrender.com/user/delete",{id},{
                 withCredentials:true
             })
             alert(res.data.message)

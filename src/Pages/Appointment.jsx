@@ -13,16 +13,16 @@ const Appointment = () => {
 
     useEffect(()=>{
         const check=async()=>{
-          const res=  await axios.post("http://localhost:3000/service/appointment",{id:user._id},{
+          const res=  await axios.post("https://projectbe-3-udjp.onrender.com/service/appointment",{id:user._id},{
                 withCredentials:true
             })
             setdatas(res.data.message)
         }
         check()
     },[])
-    // const dat=!datas?datas:[]
-    // console.log(dat)
-   const filters=datas.map((val)=>{
+    const dat=datas=="please login"?[]:datas
+    console.log(datas)
+   const filters=dat.map((val)=>{
    return {...val,
     appointmentdate: val.appointmentdate.split("T")[0]}})
 //    console.log(filters)

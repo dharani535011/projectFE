@@ -31,14 +31,14 @@ const Profile = () => {
         formData.append("id", user._id);
 
         
-        const uploadResponse = await axios.post("http://localhost:3000/upload", formData, {
+        const uploadResponse = await axios.post("https://projectbe-3-udjp.onrender.com/upload", formData, {
           // headers: { 'Content-Type': 'multipart/form-data' },
           withCredentials: true,
         });
         alert(uploadResponse.data.message);
       }
       
-     const res= await axios.post("http://localhost:3000/user/edit",{
+     const res= await axios.post("https://projectbe-3-udjp.onrender.com/user/edit",{
           email,phone,userid:user._id
       },{
         withCredentials:true
@@ -60,7 +60,7 @@ const handlecancel=(e)=>{
   setinput(false)
 }
 
-const image=user.image?`http://localhost:3000/${user.image}`: "../../public/Backgroundimg/profile.webp"
+const image=user.image?`https://projectbe-3-udjp.onrender.com/${user.image}`: "../../public/Backgroundimg/profile.webp"
   return (
     <div className='pro'>
       <Appointmentpopup1/>

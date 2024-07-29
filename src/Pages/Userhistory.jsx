@@ -14,7 +14,7 @@ const Userhistory = () => {
 
  useEffect(()=>{
   const datas=async()=>{
-      const res=  await axios.post("http://localhost:3000/service/history",{},{withCredentials:true})
+      const res=  await axios.post("https://projectbe-3-udjp.onrender.com/service/history",{},{withCredentials:true})
       sethistory(res.data.message)
      
   }

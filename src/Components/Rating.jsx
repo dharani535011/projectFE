@@ -19,7 +19,7 @@ const {ratei,ratingpop,loaders,users}=useContext(OtherContext)
   const handlesubmit=async()=>{
     setloader(true)
     try {
-     const res=await axios.post("http://localhost:3000/user/review",{
+     const res=await axios.post("https://projectbe-3-udjp.onrender.com/user/review",{
       rating,review:text,userid:user._id
      },{withCredentials:true})
       alert(res.data.message)

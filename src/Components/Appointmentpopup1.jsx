@@ -48,7 +48,7 @@
 
                 
 
-//               const res=  await axios.post("http://localhost:3000/service/book",{
+//               const res=  await axios.post("https://projectbe-3-udjp.onrender.com/service/book",{
 //                     carmodel:values.carmodel,
 //                     vehicleno:values.vehicleno,
 //                     service:values.services,
@@ -253,7 +253,7 @@ const Appointmentpopup1 = () => {
       setloader(true);
       try {
         // Call backend to create a payment intent
-        const { data: { clientSecret } } = await axios.post("http://localhost:3000/create-payment-intent", {
+        const { data: { clientSecret } } = await axios.post("https://projectbe-3-udjp.onrender.com/create-payment-intent", {
           amount: amount * 100,
           currency: 'inr',
         });
@@ -269,7 +269,7 @@ const Appointmentpopup1 = () => {
         } else {
           if (result.paymentIntent.status === 'succeeded') {
             // Simulate booking service call
-            const res = await axios.post("http://localhost:3000/service/book", {
+            const res = await axios.post("https://projectbe-3-udjp.onrender.com/service/book", {
               carmodel: values.carmodel,
               vehicleno: values.vehicleno,
               service: values.services,

@@ -60,7 +60,7 @@ const handlechangepass= async(e)=>{
        console.log(pass)
   try {
     setloader(true)
-   const response=await axios.post("http://localhost:3000/user/forgetpassword",{email:pass},{
+   const response=await axios.post("https://projectbe-3-udjp.onrender.com/user/forgetpassword",{email:pass},{
       withCredentials:true
     })
     alert(response.data.message)

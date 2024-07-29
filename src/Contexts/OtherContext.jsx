@@ -17,7 +17,7 @@ const OtherProvider=({children})=>{
     const [userss,setusers]=useState([])
     useEffect(()=>{
         const datas=async()=>{
-            const res=  await axios.post("http://localhost:3000/user/allreview",{},{withCredentials:true})
+            const res=  await axios.post("https://projectbe-3-udjp.onrender.com/user/allreview",{},{withCredentials:true})
             
             setreview(res.data)
         }
@@ -25,7 +25,7 @@ const OtherProvider=({children})=>{
     },[loader])
     useEffect(()=>{
         const datas=async()=>{
-            const res=  await axios.post("http://localhost:3000/user/allusers",{},{withCredentials:true})
+            const res=  await axios.post("https://projectbe-3-udjp.onrender.com/user/allusers",{},{withCredentials:true})
             setusers(res.data)
             
         }

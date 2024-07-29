@@ -31,7 +31,7 @@ const Resetpass = () => {
       onSubmit:async(values)=>{
        try {
         setloader(true)
-       const response=await axios.post("http://localhost:3000/user/ispassword",values,{
+       const response=await axios.post("https://projectbe-3-udjp.onrender.com/user/ispassword",values,{
           withCredentials:true
         })
         alert(response.data.message)

@@ -36,7 +36,7 @@ const Signup = () => {
       onSubmit:async(values)=>{
         try {
           setloader(true)
-         const response=await axios.post("http://localhost:3000/user/register",values,{
+         const response=await axios.post("https://projectbe-3-udjp.onrender.com/user/register",values,{
             withCredentials:true
           })
           alert(response.data.message)

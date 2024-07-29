@@ -10,7 +10,7 @@ const Vehiclehistory = () => {
 
   useEffect(()=>{
    const datas=async()=>{
-       const res=  await axios.post("http://localhost:3000/service/vehiclehistory",{},{withCredentials:true})
+       const res=  await axios.post("https://projectbe-3-udjp.onrender.com/service/vehiclehistory",{},{withCredentials:true})
        sethistory(res.data.message)
       // console.log(res.data.message)
    }
