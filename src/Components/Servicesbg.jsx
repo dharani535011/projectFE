@@ -17,7 +17,7 @@ const Servicesbg = ({name}) => {
   return (
     
     <div className='servicesbg'>
-        <img src="../../public/Backgroundimg/servicesbg.jpg" alt="" />
+        <img src="../../public/Backgroundimg/bgcar1.jpg" alt="" />
         <h1>{name}</h1>
         <button onClick={()=>handlefun()}>BOOK AN APPOINTMENT</button>
     </div>
