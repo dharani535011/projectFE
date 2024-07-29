@@ -4,7 +4,7 @@ import Appointmentpopup1 from '../Components/Appointmentpopup1';
 import { OtherContext } from '../Contexts/OtherContext';
 import axios from 'axios';
 import Loader from '../Components/Loader';
-
+import imgdub from  "../../public/Backgroundimg/profile.webp"
 const Profile = () => {
   const {users,loaders}=useContext(OtherContext)
   const [but,setbut]=useState(true)
@@ -60,7 +60,7 @@ const handlecancel=(e)=>{
   setinput(false)
 }
 
-const image=user.image?`https://projectbe-3-udjp.onrender.com/${user.image}`: "../../public/Backgroundimg/profile.webp"
+const image=user.image?`https://projectbe-3-udjp.onrender.com/${user.image}`: imgdub
   return (
     <div className='pro'>
       <Appointmentpopup1/>
