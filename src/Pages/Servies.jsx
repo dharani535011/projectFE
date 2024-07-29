@@ -17,7 +17,8 @@ const Servies = () => {
   const {service}=useParams()
  const data= useContext(DataContext)
  const para=data.find((val)=>val.head==service)
-  
+ const img=para.img
+  // console.log(para.img)
   return (
     <div>
       <Appointmentpopup1/>
@@ -29,7 +30,7 @@ const Servies = () => {
       <h4>{para.para}</h4>
       <button onClick={()=>setpop(true)}>BOOK AN APPOINTMENT</button>
       </div>
-      <div ><img src={para.img} alt="" /></div>
+      <div ><img src={img} alt="img" /></div>
     </div>
     <Whyas/>
     <Working/>
