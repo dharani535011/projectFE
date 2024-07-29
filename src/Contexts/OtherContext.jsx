@@ -52,7 +52,7 @@ const OtherProvider=({children})=>{
          
         }
         check()
-    },[authen,loader])
+    },[])
    
     return(
         <OtherContext.Provider value={{value:[popup,setpop],loaders:[loader,setloader],authentication:[authen,setauthen]

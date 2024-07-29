@@ -20,9 +20,9 @@ const Appointment = () => {
         }
         check()
     },[])
-    const dat=!datas?datas:[]
+    // const dat=!datas?datas:[]
     // console.log(dat)
-   const filters=dat.map((val)=>{
+   const filters=datas.map((val)=>{
    return {...val,
     appointmentdate: val.appointmentdate.split("T")[0]}})
 //    console.log(filters)
