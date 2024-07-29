@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { OtherContext } from '../Contexts/OtherContext'
 import { useNavigate } from 'react-router-dom'
-import img from "../../public/Backgroundimg/bgcar1.jpg"
+import img from "../../public/Backgroundimg/servicebg.jpg"
 const Servicesbg = ({name}) => {
   const navigate=useNavigate()
   const {value,authentication}= useContext(OtherContext)
