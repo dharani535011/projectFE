@@ -287,7 +287,7 @@ const Appointmentpopup1 = () => {
             setpop(false);
             setTimeout(() => {
               navigate("/appointments");
-            }, 500);
+            }, 1000);
           }
         }
       } catch (error) {
