@@ -35,7 +35,7 @@ const OtherProvider=({children})=>{
 
     useEffect(()=>{
         const check=async()=>{
-             const res=await axios.post("http://localhost:3000/user/check",{},{
+             const res=await axios.post("https://projectbe-3-udjp.onrender.com/user/check",{},{
                 withCredentials:true
              })
             
