@@ -16,7 +16,7 @@ const Gallery = () => {
   return (
     <>
     <Appointmentpopup1/>
-    <div className='gallery' style={{backgroundColor:"black"}}><h1>
+    <div className='gallery' ><h1>
      
         Gallery
         </h1>

@@ -23,7 +23,7 @@ const Aboutus = () => {
     <div>
       <SF/>
       <Appointmentpopup1/>
-        <Nav2/>
+        <Nav2 name={"About Us"}/>
         <div className='row row-cols-sm-1 row-cols-md-1 row-cols-xl-2 about'>
             <div>
             <h1>A Reputation of 25 Years in the Making</h1>
