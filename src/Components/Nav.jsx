@@ -44,7 +44,7 @@ const Nav = () => {
   }
        try {
         setloader(true)
-        const res=await axios.post("https://projectbe-3-udjp.onrender.com/logout",{},{
+        const res=await axios.post("https://projectbe-3-udjp.onrender.com/user/logout",{},{
           withCredentials:true
         })
         alert(res.data.message)
