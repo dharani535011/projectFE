@@ -27,7 +27,9 @@ const SF = () => {
               <button className='d-flex' onMouseEnter={()=>setfilter(true)}
                
                 >Filter</button>
-              <button type="button" className="close" onClick={()=>setsearc(false)} >Cancel</button>
+              <button type="button" className="close" onClick={()=>{setsearc(false)
+                setsearch("")
+              }} >Cancel</button>
               
         </div>
         <div className='fbox'  onMouseLeave={()=>setfilter(false)} style={{display:filter?"flex":"none"}}>
