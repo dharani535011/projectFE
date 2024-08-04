@@ -17,7 +17,7 @@ const SF = () => {
     );
     const common=parseInt(radio)>0?parseInt(radio):10000
     const Filtervals=common===10000?(filteredData.filter((val)=>val.price >= 2500)):(filteredData.filter((val)=>val.price<=common && val.price>=common-500))
-   
+    const num=radio.length?Filtervals:filteredData
   return (
     <>
     {searc?(<> <div className='sfbg'></div>
@@ -39,7 +39,7 @@ const SF = () => {
             <span><input type="radio" value={10000} onChange={(e)=>setradio(e.target.value)}  name='price'/>above 2500</span>
         </div>
         <div className='search'>
-         {search.length>0 && Filtervals.map((val,i)=>(
+         {search.length>0 && num.map((val,i)=>(
             
             <p key={i} onClick={()=>{navigate(`/services/${val.head}`)
              setsearc(false)
