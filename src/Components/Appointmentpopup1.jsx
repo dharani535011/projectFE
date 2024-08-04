@@ -29,7 +29,7 @@
 //   const [ratepop,setratepop]=ratingpop
 //   const [loader,setloader]=loaders
 //   const [user,setuser]=users
-// //   console.log(user.rating)
+// //   (user.rating)
 // const navigate=useNavigate()
 //   const [popup,setpop]=value
 //     const formik = useFormik({

@@ -20,12 +20,12 @@ const Appointment = () => {
         }
         check()
     },[])
-    const dat=datas=="please login"?[]:datas
-    console.log(datas)
+    const dat=(datas=="please login")||!datas.length?[]:datas
+    
    const filters=dat.map((val)=>{
    return {...val,
     appointmentdate: val.appointmentdate.split("T")[0]}})
-//    console.log(filters)
+//    (filters)
   return (
     <div>
         <Appointmentpopup1/>

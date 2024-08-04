@@ -20,7 +20,7 @@ const Userhistory = () => {
   }
 datas()
 },[])
-// console.log(history)
+// (history)
 
 
   return (

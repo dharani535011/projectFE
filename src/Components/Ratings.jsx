@@ -21,7 +21,7 @@ const Ratings = () => {
         autoplaySpeed: 3000,
       }
      
-      // console.log(review)
+  
 
       const filters=review.filter((val)=>val.review.length>0)
   return (

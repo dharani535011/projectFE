@@ -59,7 +59,7 @@ const Nav = () => {
           
        }
  }
-//  console.log(( (user.role =="admin") && ( authen)  ),authen)
+
 
   return (
     <>

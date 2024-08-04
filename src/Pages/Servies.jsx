@@ -18,7 +18,7 @@ const Servies = () => {
  const data= useContext(DataContext)
  const para=data.find((val)=>val.head==service)
  
-  // console.log(para.img)
+  // (para.img)
   return (
     <div>
       <Appointmentpopup1/>

@@ -12,7 +12,7 @@ const Vehiclehistory = () => {
    const datas=async()=>{
        const res=  await axios.post("https://projectbe-3-udjp.onrender.com/service/vehiclehistory",{},{withCredentials:true})
        sethistory(res.data.message)
-      // console.log(res.data.message)
+      // (res.data.message)
    }
  datas()
  },[])
@@ -28,12 +28,12 @@ const Vehiclehistory = () => {
 
   return null;
 }).filter(item => item !== null)
-// console.log(datas)
+// (datas)
 const Total=datas.reduce((acc,val)=>{
       acc+=val.total
       return acc
 },0)
-console.log(Total)
+
 
   return (
     <div>
