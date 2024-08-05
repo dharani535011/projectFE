@@ -39,6 +39,7 @@ const SF = () => {
             <span><input type="radio" value={1500} onChange={(e)=>setradio(e.target.value)}   name='price'/>1000-1500</span>
             <span><input type="radio" value={2000} onChange={(e)=>setradio(e.target.value)}  name='price'/>1500-2000</span>
             <span><input type="radio" value={10000} onChange={(e)=>setradio(e.target.value)}  name='price'/>above 2500</span>
+            <span><input type="radio" value={""} onChange={(e)=>setradio(e.target.value)}  name='price'/>none</span>
         </div>
         <div className='search'>
          {search.length>0 && num.map((val,i)=>(
@@ -46,6 +47,7 @@ const SF = () => {
             <p key={i} onClick={()=>{navigate(`/services/${val.head}`)
              setsearc(false)
             setsearch("")
+            setradio("")
             }}>{val.head}</p>
          ))}
         </div>
